@@ -19,8 +19,8 @@ function animate() {
     spriteHeight,
     0,
     0,
-    CANVAS_WIDTH,
-    CANVAS_HEIGHT
+    spriteWidth,
+    spriteHeight
   );
   requestAnimationFrame(animate);
 }
