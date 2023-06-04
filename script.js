@@ -21,7 +21,7 @@ const animationStates = [
   },
   {
     name: "fall",
-    frames: 9,
+    frames: 7,
   },
   {
     name: "run",
@@ -68,14 +68,14 @@ console.log(spriteAnimations);
 function animate() {
   ctx.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
   let position =
-    Math.floor(gameFrame / staggerFrames) % spriteAnimations["idle"].loc.length;
+    Math.floor(gameFrame / staggerFrames) % spriteAnimations["fall"].loc.length;
   let frameX = spriteWidth * position;
-  let frameY = spriteAnimations["idle"].loc[position].y;
+  let frameY = spriteAnimations["fall"].loc[position].y;
 
   ctx.drawImage(
     playerImage,
     frameX,
-    frameY * spriteHeight,
+    frameY,
     spriteWidth,
     spriteHeight,
     0,
